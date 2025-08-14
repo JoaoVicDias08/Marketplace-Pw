@@ -8,57 +8,55 @@ export default function Navbar() {
 
   return (
     <nav className="w-full border-b bg-gray-950">
-      <div className="container flex items-center justify-between h-16">
+      <div className="w-full flex items-center justify-around h-16">
         {/* Logo */}
         <div className="flex items-center flex-shrink-0">
           <Link href="/" className="flex items-center">
             <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary">
-              <span className="text-lg font-bold text-primary-foreground">L</span>
+            <img src="/logo.png" alt="Logo" className="w-11 h-11" />
             </div>
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="flex gap-5">
+        <div className="flex gap-5 ">
           <Link
             href="/"
-            className="px-3 py-2 text-xl transition-all text-foreground hover:text-primary font-semibold text-white hover:text-blue-600"
+            className="px-3 py-2 text-xl transition-all text-foreground hover:text-primary font-semibold text-white hover:text-blue-600 ease-in"
           >
             Home
           </Link>
           <Link
             href="/duvidas"
-            className="px-3 py-2 text-xl transition-all text-muted-foreground hover:text-primary font-semibold text-white hover:text-blue-600 "
+            className="px-3 py-2 text-xl transition-all text-muted-foreground hover:text-primary font-semibold text-white hover:text-blue-600 ease-in "
           >
             Dúvidas
           </Link>
           <Link
             href="/delivery"
-            className="px-3 py-2 text-xl transition-all text-muted-foreground hover:text-primary font-semibold text-white hover:text-blue-600 "
+            className="px-3 py-2 text-xl transition-all text-muted-foreground hover:text-primary font-semibold text-white hover:text-blue-600 ease-in "
           >
             Delivery
           </Link>
           <Link
             href="/sobre"
-            className="px-3 py-2 text-xl transition-all text-muted-foreground hover:text-primary font-semibold text-white hover:text-blue-600 "
+            className="px-3 py-2 text-xl transition-all text-muted-foreground hover:text-primary font-semibold text-white hover:text-blue-600 ease-in "
           >
             Sobre
           </Link>
         </div>
 
         {/* Desktop Auth Buttons */}
-        <div className="hidden md:flex md:items-center md:space-x-4">
-          <Link
-            href="/login"
-            className="inline-flex items-center justify-center h-10 px-4 py-2 text-sm font-medium transition-colors rounded-md ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground"
-          >
-            Login
+        <div className="flex items-center gap-4">
+          <Link href="/login">
+            <span className="bg-blue-400 text-xl rounded-2xl px-3 py-1 hover:bg-blue-500 hover:text-white transition-all ease-in font-semibold">
+              Login
+            </span>
           </Link>
-          <Link
-            href="/cadastro"
-            className="inline-flex items-center justify-center h-10 px-4 py-2 text-sm font-medium transition-colors rounded-md ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90"
-          >
-            Cadastro
+          <Link href="/cadastro">
+            <span className="bg-blue-600 text-xl rounded-2xl px-4 py-1 hover:bg-blue-700 hover:text-white transition-all ease-in font-semibold">
+              Cadastro
+            </span>
           </Link>
         </div>
 

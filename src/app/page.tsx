@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <>
     <Navbar />
-      <div className="h-screen bg-slate-900 flex justify-center items-center">
-        <h1 className={`${oswald.className} text-4xl text-white`}>Título com Oswald</h1>
-      </div>
+      <section id="home" className="h-screen bg-slate-900 flex justify-center">
+        <h1 className={`${oswald.className} text-5xl text-white mt-12`}>VNShip</h1>
+      </section>
     </>
   )
 }
