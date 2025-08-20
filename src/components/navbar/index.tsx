@@ -7,19 +7,19 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <nav className="w-full border-b bg-gray-950">
-      <div className="w-full flex items-center justify-around h-16">
-        {/* Logo */}
+    <nav className="w-full border-b bg-gray-950 px-6">
+      <div className="w-full flex items-center justify-between h-16">
+        {/* Logo à esquerda */}
         <div className="flex items-center flex-shrink-0">
           <Link href="/" className="flex items-center">
             <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary">
-            <img src="/logo.png" alt="Logo" className="w-11 h-11" />
+              <img src="/logo.png" alt="Logo" className="w-11 h-11" />
             </div>
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
-        <div className="flex gap-5 ">
+        {/* Links à direita */}
+        <div className="hidden md:flex gap-5 ml-auto">
           <Link
             href="/"
             className="px-3 py-2 text-xl transition-all text-foreground hover:text-primary font-semibold text-white hover:text-blue-600 ease-in"
@@ -46,22 +46,8 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Desktop Auth Buttons */}
-        <div className="flex items-center gap-4">
-          <Link href="/login">
-            <span className="bg-blue-400 text-xl rounded-2xl px-3 py-1 hover:bg-blue-500 hover:text-white transition-all ease-in font-semibold">
-              Login
-            </span>
-          </Link>
-          <Link href="/cadastro">
-            <span className="bg-blue-600 text-xl rounded-2xl px-4 py-1 hover:bg-blue-700 hover:text-white transition-all ease-in font-semibold">
-              Cadastro
-            </span>
-          </Link>
-        </div>
-
-        {/* Mobile menu button */}
-        <div className="flex items-center md:hidden">
+        {/* Botão do menu mobile */}
+        <div className="flex items-center md:hidden ml-auto">
           <button
             onClick={() => setMobileOpen((open) => !open)}
             aria-label="Abrir menu"
@@ -76,8 +62,8 @@ export default function Navbar() {
 
       {/* Mobile Navigation Menu */}
       {mobileOpen && (
-        <div className="border-t md:hidden bg-background">
-          <div className="px-4 pt-4 pb-3 space-y-1">
+        <div className="border-t md:hidden bg-background px-4">
+          <div className="pt-4 pb-3 space-y-1">
             <Link
               href="/"
               className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary"
@@ -106,22 +92,6 @@ export default function Navbar() {
             >
               Sobre
             </Link>
-            <div className="flex flex-col pt-4 space-y-2">
-              <Link
-                href="/login"
-                className="inline-flex items-center justify-start h-10 px-4 py-2 text-sm font-medium transition-colors rounded-md ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground"
-                onClick={() => setMobileOpen(false)}
-              >
-                Login
-              </Link>
-              <Link
-                href="/cadastro"
-                className="inline-flex items-center justify-start h-10 px-4 py-2 text-sm font-medium transition-colors rounded-md ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90"
-                onClick={() => setMobileOpen(false)}
-              >
-                Cadastro
-              </Link>
-            </div>
           </div>
         </div>
       )}
