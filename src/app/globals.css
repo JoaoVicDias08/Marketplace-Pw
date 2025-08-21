@@ -1,3 +1,27 @@
 @import "tailwindcss";
 
+* {
+    scroll-behavior: smooth;
+}
 
+/* Largura da barra de rolagem */
+::-webkit-scrollbar {
+  width: 12px; /* para scroll vertical */
+  height: 12px; /* para scroll horizontal */
+}
+
+/* Cor do trilho da barra de rolagem (fundo) */
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+/* Cor do polegar da barra de rolagem (a parte que se move) */
+::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+}
+
+/* Opcional: hover do polegar */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0056b3;
+}

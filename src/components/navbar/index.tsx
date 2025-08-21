@@ -20,30 +20,10 @@ export default function Navbar() {
 
         {/* Links à direita */}
         <div className="hidden md:flex gap-5 ml-auto">
-          <Link
-            href="/"
-            className="px-3 py-2 text-xl transition-all text-foreground hover:text-primary font-semibold text-white hover:text-blue-600 ease-in"
-          >
-            Home
-          </Link>
-          <Link
-            href="/duvidas"
-            className="px-3 py-2 text-xl transition-all text-muted-foreground hover:text-primary font-semibold text-white hover:text-blue-600 ease-in "
-          >
-            Dúvidas
-          </Link>
-          <Link
-            href="/delivery"
-            className="px-3 py-2 text-xl transition-all text-muted-foreground hover:text-primary font-semibold text-white hover:text-blue-600 ease-in "
-          >
-            Delivery
-          </Link>
-          <Link
-            href="/sobre"
-            className="px-3 py-2 text-xl transition-all text-muted-foreground hover:text-primary font-semibold text-white hover:text-blue-600 ease-in "
-          >
-            Sobre
-          </Link>
+          <a href="#home" className="px-3 py-2 text-xl transition-all text-foreground hover:text-primary font-semibold text-white hover:text-blue-600 ease-in">Home</a>
+          <a href="#duvidas" className="px-3 py-2 text-xl transition-all text-muted-foreground hover:text-primary font-semibold text-white hover:text-blue-600 ease-in ">Dúvidas</a>
+          <a href="#servicos" className="px-3 py-2 text-xl transition-all text-muted-foreground hover:text-primary font-semibold text-white hover:text-blue-600 ease-in ">Delivery</a>
+          <a href="#sobre" className="px-3 py-2 text-xl transition-all text-muted-foreground hover:text-primary font-semibold text-white hover:text-blue-600 ease-in ">Sobre</a>
         </div>
 
         {/* Botão do menu mobile */}
@@ -64,34 +44,10 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="border-t md:hidden bg-background px-4">
           <div className="pt-4 pb-3 space-y-1">
-            <Link
-              href="/"
-              className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary"
-              onClick={() => setMobileOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              href="/duvidas-frequentes"
-              className="block px-3 py-2 text-base font-medium text-muted-foreground hover:text-primary"
-              onClick={() => setMobileOpen(false)}
-            >
-              Dúvidas Frequentes
-            </Link>
-            <Link
-              href="/delivery"
-              className="block px-3 py-2 text-base font-medium text-muted-foreground hover:text-primary"
-              onClick={() => setMobileOpen(false)}
-            >
-              Delivery
-            </Link>
-            <Link
-              href="/sobre"
-              className="block px-3 py-2 text-base font-medium text-muted-foreground hover:text-primary"
-              onClick={() => setMobileOpen(false)}
-            >
-              Sobre
-            </Link>
+            <a href="#home" className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary" onClick={() => setMobileOpen(false)}>Home</a>
+            <a href="#duvidas" className="block px-3 py-2 text-base font-medium text-muted-foreground hover:text-primary" onClick={() => setMobileOpen(false)}>Dúvidas</a>
+            <a href="#servicos" className="block px-3 py-2 text-base font-medium text-muted-foreground hover:text-primary" onClick={() => setMobileOpen(false)}>Delivery</a>
+            <a href="#sobre" className="block px-3 py-2 text-base font-medium text-muted-foreground hover:text-primary" onClick={() => setMobileOpen(false)}>Sobre</a>
           </div>
         </div>
       )}
