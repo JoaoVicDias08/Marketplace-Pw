@@ -2,10 +2,23 @@ import React from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  to?: string; // id da seção para navegação
+  to?: string;
+  variant?: "primary" | "secondary" | "danger"; // Exemplo de variantes
 }
 
-export default function Button({ children, to, className = "", ...props }: ButtonProps) {
+const variantClasses = {
+  primary: "bg-blue-600 text-white hover:bg-blue-700",
+  secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300",
+  danger: "bg-red-600 text-white hover:bg-red-700",
+};
+
+export default function Button({
+  children,
+  to,
+  className = "",
+  variant = "primary",
+  ...props
+}: ButtonProps) {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (to) {
       e.preventDefault();
@@ -19,7 +32,7 @@ export default function Button({ children, to, className = "", ...props }: Butto
 
   return (
     <button
-      className={`px-6 py-2 rounded bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors ${className}`}
+      className={`px-6 py-2 rounded font-semibold transition-colors ${variantClasses[variant]} ${className}`}
       onClick={handleClick}
       {...props}
     >

@@ -7,7 +7,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <nav className="w-full border-b bg-gray-950 px-6">
+    <nav className="w-full border-b bg-gray-950 px-6 fixed">
       <div className="w-full flex items-center justify-between h-16">
         {/* Logo à esquerda */}
         <div className="flex items-center flex-shrink-0">

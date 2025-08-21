@@ -11,7 +11,7 @@ interface SectionProps {
 export default function Section({ title, description, classname, children }: SectionProps) {
   return (
     <section
-      className={`w-full min-h-screen bg-zinc-900 flex flex-col pt-20 items-center ${classname || ""}`}
+      className={`w-full min-h-screen bg-zinc-900 flex flex-col justify-center items-center pb-5 ${classname || ""}`}
     >
       {/* Renderiza o Title se houver */}
       {title && <Title className="text-center mb-1">{title}</Title>}
